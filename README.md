@@ -1,6 +1,52 @@
 # Ngrx8
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19
+
+## Tooling
+### Mocking a REST API
+json-server
+```javascript
+$ cd ~/angular-example
+$ npm install --save json-server 
+$ mkdir server
+$ cd server
+```
+
+```javascript
+// this will avoid any error
+{
+    "something": []
+}
+```
+
+```javascript
+// run the REST API server
+npm run server
+```
+
+This JSON file will act as a database for your REST API server. You can simply add some data to be served by your REST API or use 
+Faker.js for automatically generating massive amounts of realistic fake data.
+
+faker.js
+```javascript
+$ cd ..
+$ npm install faker --save
+$ npm run generateFake
+```
+
+```javascript
+// run the REST API server
+npm run server
+```
+
+You can now send HTTP requests to the server just like any other REST API server request. 
+Your server will be available at: http://localhost:3000/
+
+Further faker information:
+https://github.com/marak/Faker.js/#api-methods
+
+
+
 
 ## Development server
 

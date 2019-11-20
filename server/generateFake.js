@@ -2,6 +2,9 @@ var faker = require('faker');
 
 var database = { products: []};
 
+/**
+ * data fields to be fake
+ */
 for (var i = 1; i<= 300; i++) {
   database.products.push({
     id: i,
