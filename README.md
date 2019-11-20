@@ -46,6 +46,11 @@ Further faker information:
 https://github.com/marak/Faker.js/#api-methods
 
 
+@ngrx/schematics
+Scaffolding library for Angular applications using NgRx libraries.
+
+Further information:
+https://ngrx.io/guide/schematics/install
 
 
 ## Development server
