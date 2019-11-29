@@ -208,7 +208,7 @@ https://github.com/marak/Faker.js/#api-methods
 
 
 ### Extra dependencies:
-Husky, prettier, tslint-config-prettier, codelyzer, ng-bullet, compodoc and few others
+Husky, prettier, tslint-config-prettier, codelyzer, ng-bullet, @compodoc/compodoc and few others
 
 
 
