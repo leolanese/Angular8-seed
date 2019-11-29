@@ -110,10 +110,6 @@ https://ngrx.io/guide/schematics/install
   ],
 ```
 
-### ESlint
-
-### Husky
-
 
 ### ngMocks
 
@@ -189,7 +185,6 @@ npm run storybook
 <a href="https://storybook.js.org/docs/guides/guide-angular/">Storybook for Angular</a>
 
 
-
 ### faker
 
 > There is already a file: generateFake.js inside /server
@@ -210,6 +205,11 @@ Your server will be available at: http://localhost:3000/
 
 Further faker information:
 https://github.com/marak/Faker.js/#api-methods
+
+
+### Extra dependencies:
+Husky, prettier, tslint-config-prettier, codelyzer, ng-bullet, compodoc and few others
+
 
 
 ---
