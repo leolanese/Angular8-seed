@@ -154,11 +154,11 @@ Faker.js for automatically generating massive amounts of realistic fake data.
 
 
 ### Storybook
-Mocking UI faster
+Mocking UI faster (OPTIONAL - Not install be default)
 
 ```javascript
 npm i @babel/core @babel-loader --save-dev
-npm install @storybook/angular --save-dev
+npm i @storybook/angular --save-dev
 ```
 
 > Add a npm script: 
@@ -169,6 +169,16 @@ npm install @storybook/angular --save-dev
   }
 }
 ```
+
+```html
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-knobs": "^5.2.4",
+    "@storybook/addon-links": "^5.2.4",
+    "@storybook/addon-notes": "^5.2.4",
+    "@storybook/addons": "^5.2.4",
+    "@storybook/angular": "^5.2.6",
+```
+
 
 > Run 
 ```javascript
