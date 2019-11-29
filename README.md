@@ -1,6 +1,44 @@
 # Angular8-seed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version ~8.3.19 with code: ~8.2.14
+
+
+```html
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / ? \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+
+
+Angular CLI: 8.3.19
+Node: 10.16.3
+OS: win32 x64
+Angular: 8.2.14
+... animations, common, compiler, compiler-cli, core, forms
+... language-service, platform-browser, platform-browser-dynamic
+... router
+
+Package                           Version
+-----------------------------------------------------------
+@angular-devkit/architect         0.803.19
+@angular-devkit/build-angular     0.803.19
+@angular-devkit/build-optimizer   0.803.19
+@angular-devkit/build-webpack     0.803.19
+@angular-devkit/core              8.3.19
+@angular-devkit/schematics        8.3.19
+@angular/cdk                      8.2.3
+@angular/cli                      8.3.19
+@angular/material                 8.2.3
+@ngtools/webpack                  8.3.19
+@schematics/angular               8.3.19
+@schematics/update                0.803.19
+rxjs                              6.5.3
+typescript                        3.7.2
+webpack                           4.39.2
+
+```
 
 ---
 
@@ -113,6 +151,34 @@ npm run server
 
 This JSON file will act as a database for your REST API server. You can simply add some data to be served by your REST API or use 
 Faker.js for automatically generating massive amounts of realistic fake data.
+
+
+### Storybook
+Mocking UI faster
+
+```javascript
+npm i @babel/core @babel-loader --save-dev
+npm install @storybook/angular --save-dev
+```
+
+> Add a npm script: 
+```javascript
+{
+  "scripts": {
+    "storybook": "start-storybook"
+  }
+}
+```
+
+> Run 
+```javascript
+npm run storybook
+```
+
+### Further information:
+<a href="https://storybook.js.org/docs/guides/guide-angular/">Storybook for Angular</a>
+
+
 
 ### faker
 
