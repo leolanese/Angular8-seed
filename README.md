@@ -6,6 +6,89 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Tooling
 
+## @ngrx deployment 
+
+### @ngrx dependencies
+```javascript
+npm i @ngrx/store @ngrx/effects  @ngrx/entity @ngrx/data  @ngrx/schematics @ngrx/store-devtools @ngrx/router-store --save
+```
+
+```html
+"devDependencies": {
+  "@ngrx/data": "^8.5.2",
+  "@ngrx/effects": "^8.5.2",
+  "@ngrx/entity": "^8.5.2",
+  "@ngrx/router-store": "^8.5.1",
+  "@ngrx/store": "^8.5.2",
+  "@ngrx/store-devtools": "^8.5.2",
+}
+```
+
+
+### @ngrx devDependencies
+```javascript
+npm i @ngrx/schematics --save-dev
+```
+
+```html
+"devDependencies": {
+  "@ngrx/schematics": "^8.5.2",
+}
+```
+
+
+> Update: angular.json > cli > defaultCollection with @ngrx/schematics
+```javascript
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
+```
+
+
+Further information:
+https://ngrx.io/guide/schematics/install
+
+
+### Prettier
+
+- Include Prettier (this can be handle by the pipeline later on):
+```javascript
+  npm install --save-dev --save-exact prettier
+```
+- Include a Service with a Component already declared:
+```javascript
+  cd test-app/src/app
+  mkdir service
+  ng g s service
+```  
+- Include a reference to empty side defined boxes
+- Include modular bootstrap 4
+```javascript
+  npm install bootstrap --save
+  open angular.json
+  "styles": [
+    "src/styles.css",
+    "node_modules/bootstrap/dist/css/bootstrap.min.css"
+  ],
+```
+
+### ESlint
+
+### Husky
+
+
+### ngMocks
+
+We are going to use: MockStore from '@ngrx/store/testing' so we later we can set the state using the setState method from MockStore.
+
+<b>ngMocks</b> will help us to mock:
+MockComponent, MockDirective, MockPipe, MockModule, etc.
+
+Helper function for creating angular mocks for test.
+<a href="https://www.npmjs.com/package/ng-mocks">ng-mocks</a>
+
+
+
 ### json-server
 Mocking a REST API
 
@@ -52,40 +135,6 @@ Your server will be available at: http://localhost:3000/
 Further faker information:
 https://github.com/marak/Faker.js/#api-methods
 
----
-## @ngrx deployment 
-```javascript
-npm i @ngrx/store @ngrx/effects  @ngrx/entity @ngrx/data  @ngrx/schematics @ngrx/store-devtools --save
-```
-
-
-Further information:
-https://ngrx.io/guide/schematics/install
-
----
-
-## Prettier
-
-- Include Prettier (this can be handle by the pipeline later on):
-```javascript
-  npm install --save-dev --save-exact prettier
-```
-- Include a Service with a Component already declared:
-```javascript
-  cd test-app/src/app
-  mkdir service
-  ng g s service
-```  
-- Include a reference to empty side defined boxes
-- Include modular bootstrap 4
-```javascript
-  npm install bootstrap --save
-  open angular.json
-  "styles": [
-    "src/styles.css",
-    "node_modules/bootstrap/dist/css/bootstrap.min.css"
-  ],
-```
 
 ---
 
