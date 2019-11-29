@@ -255,7 +255,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```javascript
+ng serve -o
+```
+
+```html
+i ｢wds｣: Project is running at http://localhost:4200/webpack-dev-server/
+i ｢wds｣: webpack output is served from /
+i ｢wds｣: 404s will fallback to //index.html
+```
+
 
 ## Code scaffolding
 
