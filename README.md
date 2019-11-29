@@ -207,11 +207,29 @@ https://github.com/marak/Faker.js/#api-methods
 ## Development server
 
 ```javasciot
-ng serve -o` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ng serve -o
+```
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```javascript
+ng generate component component-name
+```
+
+> to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`
+
+
+Using ngrx schematics:
+
+```javascript
+ng generate action ActionName
+```
+
+> to generate a new component. You can also use `ng generate action|reducer|container|effect|entity featureName`
+
+
+Further information:
+https://ngrx.io/guide/schematics
 
 ---
 
