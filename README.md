@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Mocking a REST API
 json-server
 ```javascript
-$ cd ~/Angular8-seed
+$ cd ~/src/Angular8-seed
 $ npm i --save json-server 
 $ mkdir server
 $ cd server
