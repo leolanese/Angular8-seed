@@ -265,7 +265,14 @@ File angular.json has included "Bootstrap CSS" and JS files as well as "jQuery" 
     },
 ```
 
-### font-Awesome
+### font-Awesome: @angular-fontawesome
+Dependencies:
+```javasript
+    "@fortawesome/angular-fontawesome": "^0.5.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+ ```   
+
 
 Include fontawesome:
 ```javascript  
@@ -275,7 +282,7 @@ Include fontawesome:
 ```
 
 Further information:
-https://fontawesome.com/how-to-use/on-the-web/using-with/angular
+https://www.npmjs.com/package/@fortawesome/angular-fontawesome
 
 
 ### Storybook
