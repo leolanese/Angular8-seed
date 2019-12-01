@@ -283,6 +283,8 @@ Include fontawesome:
 
 Further information:
 https://www.npmjs.com/package/@fortawesome/angular-fontawesome
+https://fontawesome.com/how-to-use/with-the-api/setup/importing-icons
+https://github.com/FortAwesome/angular-fontawesome/blob/be99071851eea2c6d3211b9c3de38aca44a5b624/docs/usage/features.md#basic-use
 
 
 ### Storybook
