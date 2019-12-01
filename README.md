@@ -40,8 +40,9 @@ webpack                           4.39.2
 
 ```
 
-> ~version: "Approximately equivalent to version", will update you to the next patch version. 
-> ^version: Will update you to the next minor version. 
+#### Note:
+<p> ~version: "Approximately equivalent to version", will update you to the next patch version. </p>
+<p> ^version: Will update you to the next minor version. This could affect Jenkins version deployments based on the OS</p>
 
 ---
 
@@ -222,6 +223,10 @@ Creates a address form component
 ```javascript
 ng generate @angular/material:address-form --name myAddressForm
 ```
+
+Further Information:
+<a href="https://material.angular.io/components/categories">material componentes</a>
+
 
 ### Storybook
 Mocking UI faster (OPTIONAL - Not install be default)
