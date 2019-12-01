@@ -197,24 +197,25 @@ Angular CLI's install schematic
 Creates toolbar and navigation components
 ```javascript
 ng generate @angular/material:material-nav --name myNav
-
+```
 // Creates toolbar and navigation components
 ```javascript
 ng generate @angular/material:material-nav --name myNav
 ```
-// Create a dashboard component
+Create a dashboard component
 ```javascript
 ng generate @angular/material:material-dashboard --name myDashboard
 ```
-// Creates a table component
+Creates a table component
 ```javascript
 ng generate @angular/material:material-table --name myTable
 ```
-// Adds Angular Material to an application without changing any templates
+
+Adds Angular Material to an application without changing any templates
 ```javascript
 ng generate @angular/material:material-shell --name myShell
 ```
-// Creates a address form component
+Creates a address form component
 ```javascript
 ng generate @angular/material:address-form --name myAddressForm
 ```
