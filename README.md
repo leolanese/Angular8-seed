@@ -265,6 +265,18 @@ File angular.json has included "Bootstrap CSS" and JS files as well as "jQuery" 
     },
 ```
 
+### font-Awesome
+
+Include fontawesome:
+```javascript  
+<div style="text-align:center">
+  <fa-icon [icon]="faCoffee"></fa-icon>
+</div>
+```
+
+Further information:
+https://fontawesome.com/how-to-use/on-the-web/using-with/angular
+
 
 ### Storybook
 Mocking UI faster (OPTIONAL - Not install be default)
