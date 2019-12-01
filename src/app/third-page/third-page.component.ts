@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-third-page',
   templateUrl: './third-page.component.html',
-  styleUrls: ['./third-page.component.scss']
+  styleUrls: ['./third-page.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThirdPageComponent implements OnInit {
 

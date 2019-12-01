@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSquare, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
+
 import {
   MatToolbarModule,
   MatIconModule,
@@ -43,6 +47,8 @@ const appRoutes: Routes = [
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    RouterModule.forRoot(appRoutes),
+
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -50,11 +56,15 @@ const appRoutes: Routes = [
     MatProgressSpinnerModule,
     MatSliderModule,
     MatMenuModule,
-
-    RouterModule.forRoot(appRoutes),
     MatListModule,
+
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    library.add(faSquare, faCheckSquare);
+  }
+}

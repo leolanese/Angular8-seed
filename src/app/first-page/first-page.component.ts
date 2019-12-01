@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-first-page',
   templateUrl: './first-page.component.html',
-  styleUrls: ['./first-page.component.scss']
+  styleUrls: ['./first-page.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FirstPageComponent implements OnInit {
 

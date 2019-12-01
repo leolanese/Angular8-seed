@@ -1,36 +1,40 @@
-<!--The content below is only to route and can be replaced.-->
-<mat-menu #appMenu="matMenu">
-  <button mat-menu-item  routerLink="/first-page">First page</button>
-  <button mat-menu-item  routerLink="/second-page">Second page</button>
-  <button mat-menu-item  routerLink="/third-page">Third page</button>
-  <button mat-menu-item>Help</button>
-</mat-menu>
-<button mat-icon-button [matMenuTriggerFor]="appMenu">
-  <mat-icon>more_vert</mat-icon>
-</button>
-
-<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-  <a class="navbar-brand" href="#">Angular Bootstrap Demo</a>
+<!--The content below is only BootStrap to route and can be replaced.-->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Angular8 Seed</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
           aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
-
       <li class="nav-item">
-        <a class="nav-link" routerLink="/home">Home</a>
+        <a class="nav-link" routerLink="/first-page">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/contact-list">Contacts</a>
+        <a class="nav-link" routerLink="/second-page">Contacts</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/contact-create">Create</a>
+        <a class="nav-link" routerLink="/third-page">Create</a>
       </li>
-
     </ul>
   </div>
 </nav>
+
+<!--The content below is only Material to route and can be replaced.-->
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item  routerLink="/first-page">First page</button>
+  <button mat-menu-item  routerLink="/second-page">Second page</button>
+  <button mat-menu-item  routerLink="/third-page">Third page</button>
+</mat-menu>
+<button mat-icon-button [matMenuTriggerFor]="appMenu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+
+<!--The content below is only font-Awesome and can be replaced.-->
+<fa-icon
+  [icon]="faUserDefault"
+  (click)="onClickBtn($event)"
+></fa-icon>
 
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
@@ -51,6 +55,7 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
+
 
 
 
