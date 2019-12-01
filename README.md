@@ -249,6 +249,23 @@ Bootstrap Utilities:
 ```
 
 
+File angular.json has included "Bootstrap CSS" and JS files as well as "jQuery" to the styles and scripts arrays under the build target:
+```javascript
+"architect": {
+  "build": {
+    [...], 
+    "styles": [
+      "src/styles.css", 
+        "node_modules/bootstrap/dist/css/bootstrap.min.css"
+      ],
+      "scripts": [
+        "node_modules/jquery/dist/jquery.min.js",
+        "node_modules/bootstrap/dist/js/bootstrap.min.js"
+      ]
+    },
+```
+
+
 ### Storybook
 Mocking UI faster (OPTIONAL - Not install be default)
 
