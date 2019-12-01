@@ -6,19 +6,37 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatToolbarModule,
+import {
+  MatToolbarModule,
   MatIconModule,
   MatCardModule,
   MatButtonModule,
-  MatProgressSpinnerModule } from '@angular/material';
-import {HomeComponent} from './home/home.component';
-import {AboutComponent} from './about/about.component';
+  MatProgressSpinnerModule,
+  MatSliderModule, MatMenuModule, MatListModule
+} from '@angular/material';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+
+import { RouterModule, Routes } from '@angular/router';
+import { FirstPageComponent } from './first-page/first-page.component';
+import { SecondPageComponent } from './second-page/second-page.component';
+import { ThirdPageComponent } from './third-page/third-page.component';
+
+const appRoutes: Routes = [
+  { path: 'first-page', component: FirstPageComponent },
+  { path: 'second-page', component: SecondPageComponent },
+  { path: 'third-page', component: ThirdPageComponent }
+];
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    FirstPageComponent,
+    SecondPageComponent,
+    ThirdPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +47,12 @@ import {AboutComponent} from './about/about.component';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSliderModule,
+    MatMenuModule,
+
+    RouterModule.forRoot(appRoutes),
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
