@@ -228,6 +228,27 @@ Further Information:
 <a href="https://material.angular.io/components/categories">material componentes</a>
 
 
+### Bootstrap 4+
+
+### Do not import all Modules, Just Include what you need:
+
+Bootstrap Reboot:
+```javascript
+@import "~bootstrap/scss/reboot"; // add reset reboot scss
+```
+
+Bootstrap Grid:
+Both Bootstrap and Angular Material Design delivers solutions based on a grid system. They are both quite similar although Bootstrap’s grid is more advanced.
+```javascript
+@import "~bootstrap/scss/grid"; // add the grid
+```
+
+Bootstrap Utilities:
+```javascript
+@import "~bootstrap/scss/utilities"; // add css utilities
+```
+
+
 ### Storybook
 Mocking UI faster (OPTIONAL - Not install be default)
 
