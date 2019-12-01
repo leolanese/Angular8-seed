@@ -40,6 +40,9 @@ webpack                           4.39.2
 
 ```
 
+> ~version: "Approximately equivalent to version", will update you to the next patch version. 
+> ^version: Will update you to the next minor version. 
+
 ---
 
 ## Tooling build
