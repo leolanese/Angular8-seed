@@ -188,7 +188,36 @@ Further faker information:
 <a href="https://github.com/marak/Faker.js/#api-methods">facker npm</a>
 
 
-## UI Mocking 
+## UI
+
+### Angular Material
+
+Angular CLI's install schematic
+
+Creates toolbar and navigation components
+```javascript
+ng generate @angular/material:material-nav --name myNav
+
+// Creates toolbar and navigation components
+```javascript
+ng generate @angular/material:material-nav --name myNav
+```
+// Create a dashboard component
+```javascript
+ng generate @angular/material:material-dashboard --name myDashboard
+```
+// Creates a table component
+```javascript
+ng generate @angular/material:material-table --name myTable
+```
+// Adds Angular Material to an application without changing any templates
+```javascript
+ng generate @angular/material:material-shell --name myShell
+```
+// Creates a address form component
+```javascript
+ng generate @angular/material:address-form --name myAddressForm
+```
 
 ### Storybook
 Mocking UI faster (OPTIONAL - Not install be default)
