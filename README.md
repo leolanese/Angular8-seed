@@ -1,6 +1,6 @@
 # Angular8-seed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version ~8.3.19 with code: ~8.2.14
+This project was projected with [Angular CLI](https://github.com/angular/angular-cli) version ~8.3.19 with Core: ~8.2.14
 
 
 ```html
@@ -43,8 +43,9 @@ webpack                           4.39.2
 ---
 
 ## Tooling
+> tooling /ˈtuːlɪŋ/ - assorted tools, especially ones required for a mechanized process.
 
-## @ngrx deployment 
+## Redux
 
 ### @ngrx dependencies
 ```javascript
@@ -86,6 +87,9 @@ npm i @ngrx/schematics --save-dev
 Further information:
 https://ngrx.io/guide/schematics/install
 
+---
+
+## Code standarts 
 
 ### Prettier
 
@@ -100,6 +104,11 @@ https://ngrx.io/guide/schematics/install
   ng g s service
 ```  
 - Include a reference to empty side defined boxes
+
+## Quality Control
+
+### bootstrap 4
+
 - Include modular bootstrap 4
 ```javascript
   npm install bootstrap --save
@@ -110,6 +119,7 @@ https://ngrx.io/guide/schematics/install
   ],
 ```
 
+## Unit-Test helpers
 
 ### ngMocks
 
@@ -122,9 +132,15 @@ Helper function for creating angular mocks for test.
 <a href="https://www.npmjs.com/package/ng-mocks">ng-mocks</a>
 
 
+### ng-bullet
+Bullet is a library which enhances your unit testing experience with Angular TestBed, greatly increasing execution speed of your tests.
+
+Furhter information:
+<a href="https://www.npmjs.com/package/ng-bullet">ng-bullet npm</a>
+
 
 ### json-server
-Mocking a REST API
+Mocking the REST API
 
 ```javascript
 $ cd ~/Angular8-seed
@@ -148,6 +164,31 @@ npm run server
 This JSON file will act as a database for your REST API server. You can simply add some data to be served by your REST API or use 
 Faker.js for automatically generating massive amounts of realistic fake data.
 
+
+### faker
+Tool to generate massive amounts of fake data in the browser, very handy to mock day just knowing the Interface/Model.
+
+> There is already a file: generateFake.js inside /server
+
+```javascript
+$ cd ..
+$ npm install faker --save
+$ npm run generateFake
+```
+
+```javascript
+// run the REST API server
+npm run server
+```
+
+You can now send HTTP requests to the server just like any other REST API server request. 
+Your server will be available at: http://localhost:3000/
+
+Further faker information:
+<a href="https://github.com/marak/Faker.js/#api-methods">facker npm</a>
+
+
+## UI Mocking 
 
 ### Storybook
 Mocking UI faster (OPTIONAL - Not install be default)
@@ -185,29 +226,8 @@ npm run storybook
 <a href="https://storybook.js.org/docs/guides/guide-angular/">Storybook for Angular</a>
 
 
-### faker
 
-> There is already a file: generateFake.js inside /server
-
-```javascript
-$ cd ..
-$ npm install faker --save
-$ npm run generateFake
-```
-
-```javascript
-// run the REST API server
-npm run server
-```
-
-You can now send HTTP requests to the server just like any other REST API server request. 
-Your server will be available at: http://localhost:3000/
-
-Further faker information:
-https://github.com/marak/Faker.js/#api-methods
-
-
-### Extra dependencies:
+### Extra (pre-configurated) dependencies:
 Husky, prettier, tslint-config-prettier, codelyzer, ng-bullet, @compodoc/compodoc and few others
 
 
