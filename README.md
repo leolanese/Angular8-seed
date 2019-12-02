@@ -125,16 +125,46 @@ https://ngrx.io/guide/schematics/install
 
 ## Unit-Test helpers
 
-### ngMocks
+### ngMocks to mock Angular in general
 
-We are going to use: MockStore from '@ngrx/store/testing' so we later we can set the state using the setState method from MockStore.
+ We are going to use: MockStore from '@ngrx/store/testing' so we later we can set the state using the setState method from MockStore.
 
 <b>ngMocks</b> will help us to mock:
 MockComponent, MockDirective, MockPipe, MockModule, etc.
 
 Helper function for creating angular mocks for test.
-<a href="https://www.npmjs.com/package/ng-mocks">ng-mocks</a>
+<a href="https://www.npmjs.com/package/ng-mocks">ng-mocks</a>+
 
+
+### MockStore 
+We don't import the real Store with reducers into your TestBed.  We will be using mockStore, ngrx7+ provides a mocked Store out of the box. Instead of manually mocking the Store (famouse reported buggy issues) we simply use provideMockStore in your TestBed, with/without overrideSelector to mocking the store state.
+
+```javascript
+import { MockStore, provideMockStore } from '@ngrx/store/testing';
+
+describe('Should Component test values', () => {
+
+providers: [
+...
+        provideMockStore({
+            initialState: {
+                details: {
+                    isLoading: true,
+                    policy: null
+                }
+            }
+        })
+...
+]
+
+```        
+
+1- We're substituting the real Store with a MockStore and providing it an initial state. Now we can test how the component behaves in various states simply by calling setState() on our MockStore.
+2- We are spying on: store.dispatch() so we can verify that the component dispatches the Action.
+
+
+Further information:
+https://ngrx.io/api/store/testing/MockStore
 
 ### ng-bullet
 Bullet is a library which enhances your unit testing experience with Angular TestBed, greatly increasing execution speed of your tests.
