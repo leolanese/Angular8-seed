@@ -109,6 +109,8 @@ https://ngrx.io/guide/schematics/install
 ```  
 - Include a reference to empty side defined boxes
 
+---
+
 ## Quality Control
 
 ### bootstrap 4
@@ -122,6 +124,8 @@ https://ngrx.io/guide/schematics/install
     "node_modules/bootstrap/dist/css/bootstrap.min.css"
   ],
 ```
+
+---
 
 ## Unit-Test helpers
 
@@ -172,6 +176,7 @@ Bullet is a library which enhances your unit testing experience with Angular Tes
 Furhter information:
 <a href="https://www.npmjs.com/package/ng-bullet">ng-bullet npm</a>
 
+---
 
 ### json-server
 Mocking the REST API
@@ -221,6 +226,7 @@ Your server will be available at: http://localhost:3000/
 Further faker information:
 <a href="https://github.com/marak/Faker.js/#api-methods">facker npm</a>
 
+---
 
 ## UI
 
@@ -358,7 +364,7 @@ npm run storybook
 Husky, prettier, tslint-config-prettier, codelyzer, ng-bullet, @compodoc/compodoc and few others
 
 
-
+---
 ---
 
 ## Development server
