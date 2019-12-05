@@ -1,6 +1,4 @@
-import {ChangeDetectionStrategy, Component, ViewChild} from '@angular/core';
-
-import { faCoffee, faCloudRain, faDiceD6, faCloud } from '@fortawesome/free-solid-svg-icons';
+import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +8,11 @@ import { faCoffee, faCloudRain, faDiceD6, faCloud } from '@fortawesome/free-soli
 })
 export class AppComponent {
   title = 'Angular8-seed';
-  faCoffee = faCoffee;
-
   isActive = true;
+
+  // solid icons use the prefix 'fas'
   faUserDefault = ['fas', 'square'];
-  faUser = ['fas', 'square'];
+  faUser = ['fab', 'square'];
   faUserCheck = ['fas', 'check-square'];
 
   toggle(): boolean {
