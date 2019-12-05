@@ -109,6 +109,8 @@ https://ngrx.io/guide/schematics/install
 ```  
 - Include a reference to empty side defined boxes
 
+---
+
 ## Quality Control
 
 ### bootstrap 4
@@ -123,18 +125,50 @@ https://ngrx.io/guide/schematics/install
   ],
 ```
 
+---
+
 ## Unit-Test helpers
 
-### ngMocks
+### ngMocks to mock Angular in general
 
-We are going to use: MockStore from '@ngrx/store/testing' so we later we can set the state using the setState method from MockStore.
+ We are going to use: MockStore from '@ngrx/store/testing' so we later we can set the state using the setState method from MockStore.
 
 <b>ngMocks</b> will help us to mock:
 MockComponent, MockDirective, MockPipe, MockModule, etc.
 
 Helper function for creating angular mocks for test.
-<a href="https://www.npmjs.com/package/ng-mocks">ng-mocks</a>
+<a href="https://www.npmjs.com/package/ng-mocks">ng-mocks</a>+
 
+
+### MockStore 
+We don't import the real Store with reducers into your TestBed.  We will be using mockStore, ngrx7+ provides a mocked Store out of the box. Instead of manually mocking the Store (famouse reported buggy issues) we simply use provideMockStore in your TestBed, with/without overrideSelector to mocking the store state.
+
+```javascript
+import { MockStore, provideMockStore } from '@ngrx/store/testing';
+
+describe('Should Component test values', () => {
+
+providers: [
+...
+        provideMockStore({
+            initialState: {
+                details: {
+                    isLoading: true,
+                    policy: null
+                }
+            }
+        })
+...
+]
+
+```        
+
+1- We're substituting the real Store with a MockStore and providing it an initial state. Now we can test how the component behaves in various states simply by calling setState() on our MockStore.
+2- We are spying on: store.dispatch() so we can verify that the component dispatches the Action.
+
+
+Further information:
+https://ngrx.io/api/store/testing/MockStore
 
 ### ng-bullet
 Bullet is a library which enhances your unit testing experience with Angular TestBed, greatly increasing execution speed of your tests.
@@ -142,6 +176,7 @@ Bullet is a library which enhances your unit testing experience with Angular Tes
 Furhter information:
 <a href="https://www.npmjs.com/package/ng-bullet">ng-bullet npm</a>
 
+---
 
 ### json-server
 Mocking the REST API
@@ -191,6 +226,7 @@ Your server will be available at: http://localhost:3000/
 Further faker information:
 <a href="https://github.com/marak/Faker.js/#api-methods">facker npm</a>
 
+---
 
 ## UI
 
@@ -328,7 +364,7 @@ npm run storybook
 Husky, prettier, tslint-config-prettier, codelyzer, ng-bullet, @compodoc/compodoc and few others
 
 
-
+---
 ---
 
 ## Development server
@@ -418,29 +454,27 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
---
+---
 
-#### { 'Leo Lanese',
-####   'Building Inspiring Responsive Reactive Solutions',
-####   'London, UK' }
-
-##### Portfolio<br>
+<h5> { 'Leo Lanese',<br>
+       'Building Inspiring Responsive Reactive Solutions',<br>
+       'London, UK' }<br>
+</h5>
+<h5>Portfolio
 <a href="http://www.leolanese.com" target="_blank">http://www.leolanese.com</a>
-
-##### Twitter:<br>
+</h5>
+<h5>Twitter:
 <a href="http://twitter.com/LeoLaneseltd" target="_blank">twitter.com/LeoLaneseltd</a>
-
-##### Questions / Suggestion / Recommendation ?<br>
+</h5>
+<h5>Questions / Suggestion / Recommendation ?
 <a href="mail:to">developer@leolanese.com</a>
-
-#### GitHub bash profile:<br>
-<a href="http://github.com/leolanese/bash_profile" target="_blank">github.com/leolanese/bash_profile</a>
-
-##### DEV.to:<br>
+</h5>
+<h5>DEV.to:
 <a href="http://www.dev.to/leolanese" target="_blank">www.dev.to/leolanese</a>
-
-##### Blog:<br/>
+</h5>
+<h5>Blog:
 <a href="http://www.leolanese.com/blog" target="_blank">leolanese.com/blog</a>
+</h5>
 
 
 
