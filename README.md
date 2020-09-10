@@ -1,7 +1,6 @@
 # Angular8-seed
 
-This project was projected with [Angular CLI](https://github.com/angular/angular-cli) version ~8.3.19 with Core: ~8.2.14
-
+Angular seed for advanced projects.
 
 ```html
      _                      _                 ____ _     ___
