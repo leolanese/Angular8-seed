@@ -108,10 +108,6 @@ https://ngrx.io/guide/schematics/install
 ```  
 - Include a reference to empty side defined boxes
 
----
-
-## Quality Control
-
 ### bootstrap 4
 
 - Include modular bootstrap 4
@@ -125,10 +121,9 @@ https://ngrx.io/guide/schematics/install
 ```
 
 ---
+## Unit-Test tooling
 
-## Unit-Test helpers
-
-### ngMocks to mock Angular in general
+### ngMocks (to mock Angular in general)
 
  We are going to use: MockStore from '@ngrx/store/testing' so we later we can set the state using the setState method from MockStore.
 
@@ -139,7 +134,7 @@ Helper function for creating angular mocks for test.
 <a href="https://www.npmjs.com/package/ng-mocks">ng-mocks</a>+
 
 
-### MockStore 
+### MockStore (mocked Store out of the box)
 We don't import the real Store with reducers into your TestBed.  We will be using mockStore, ngrx7+ provides a mocked Store out of the box. Instead of manually mocking the Store (famouse reported buggy issues) we simply use provideMockStore in your TestBed, with/without overrideSelector to mocking the store state.
 
 ```javascript
@@ -162,22 +157,22 @@ providers: [
 
 ```        
 
-1- We're substituting the real Store with a MockStore and providing it an initial state. Now we can test how the component behaves in various states simply by calling setState() on our MockStore.
+1- We're substituting the real Store with a MockStore and providing it an initial state. Now we can test how the component behaves in various states simply by calling setState() on our MockStore.<br>
 2- We are spying on: store.dispatch() so we can verify that the component dispatches the Action.
 
 
-Further information:
+Further information:<br>
 https://ngrx.io/api/store/testing/MockStore
 
-### ng-bullet
+### ng-bullet (speeding up unit-test)
 Bullet is a library which enhances your unit testing experience with Angular TestBed, greatly increasing execution speed of your tests.
 
-Furhter information:
+Furhter information:<br>
 <a href="https://www.npmjs.com/package/ng-bullet">ng-bullet npm</a>
 
----
 
-### json-server
+### json-server (mocking restApi)
+
 Mocking the REST API
 
 ```javascript
@@ -203,7 +198,7 @@ This JSON file will act as a database for your REST API server. You can simply a
 Faker.js for automatically generating massive amounts of realistic fake data.
 
 
-### faker
+### faker (fake data all over)
 Tool to generate massive amounts of fake data in the browser, very handy to mock day just knowing the Interface/Model.
 
 > There is already a file: generateFake.js inside /server
@@ -219,10 +214,10 @@ $ npm run generateFake
 npm run server
 ```
 
-You can now send HTTP requests to the server just like any other REST API server request. 
-Your server will be available at: http://localhost:3000/
+-You can now send HTTP requests to the server just like any other REST API server request.<br>
+-Your server will be available at: http://localhost:3000/<br>
 
-Further faker information:
+#### Further faker information:<br>
 <a href="https://github.com/marak/Faker.js/#api-methods">facker npm</a>
 
 ---
@@ -358,12 +353,9 @@ npm run storybook
 <a href="https://storybook.js.org/docs/guides/guide-angular/">Storybook for Angular</a>
 
 
-
 ### Extra (pre-configurated) dependencies:
 Husky, prettier, tslint-config-prettier, codelyzer, ng-bullet, @compodoc/compodoc and few others
 
-
----
 ---
 
 ## Development server
@@ -381,7 +373,7 @@ ng generate component component-name
 > to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`
 
 
-Using ngrx schematics:
+#### Using ngrx schematics:
 
 ```javascript
 ng generate action ActionName
@@ -390,7 +382,7 @@ ng generate action ActionName
 > to generate a new component. You can also use `ng generate action|reducer|container|effect|entity featureName`
 
 
-Further information:
+Further information:<br>
 https://ngrx.io/guide/schematics
 
 ---
